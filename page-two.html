@@ -5,10 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poll Widget Demo - Two Polls</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7P1YMQGXFG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-7P1YMQGXFG");
+    </script>
   </head>
   <body>
     <main class="max-w-7xl mx-auto p-4">
-      <a href="/" class="block py-3 font-medium underline text-blue-500">Home</a>
+      <a href="/" class="block py-3 font-medium underline text-blue-500"
+        >Home</a
+      >
       <div id="p-1"></div>
       <div id="p-2" class="border-t border-gray-200 mt-6 pt-6"></div>
     </main>
