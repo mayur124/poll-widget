@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll Widget Demo</title>
+  </head>
+  <body>
+    <main class="max-w-7xl mx-auto p-4">
+      <a href="/page-two.html" class="block py-3 font-medium underline text-blue-500">Page Two</a>
+      <div id="root"></div>
+    </main>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function (uniqueId) {
+        window.PollWidget = window.PollWidget || {};
+        var PollWidget = window.PollWidget;
+        PollWidget[uniqueId] =
+          PollWidget[uniqueId] ||
+          function (config) {
+            (PollWidget[uniqueId].c = PollWidget[uniqueId].c || []).push(
+              config
+            );
+          };
+      })("_pw");
+      PollWidget._pw({
+        parentElementId: "root",
+        id: "1",
+        createdTimestamp: Date.now(),
+        question: "What type of video games do you enjoy the most?",
+        options: [
+          {
+            id: "1",
+            label: "Action/Adventure",
+            voteCount: 0,
+          },
+          {
+            id: "2",
+            label: "Strategy",
+            voteCount: 0,
+          },
+          {
+            id: "3",
+            label: "Role-playing",
+            voteCount: 0,
+          },
+          {
+            id: "4",
+            label: "Sports",
+            voteCount: 0,
+          },
+        ],
+        totalVotes: 0,
+      });
+      // rendering same poll again
+      PollWidget._pw({
+        parentElementId: "root",
+        id: "1",
+        createdTimestamp: Date.now(),
+        question: "How are you feeling today?",
+        options: [
+          {
+            id: "1",
+            label: "Brilliant! I have so much energy.",
+            voteCount: 0,
+          },
+          {
+            id: "2",
+            label: "Always can be worse.",
+            voteCount: 0,
+          },
+          {
+            id: "3",
+            label: "Please, end my misery.",
+            voteCount: 0,
+          },
+        ],
+        totalVotes: 0,
+      });
+    </script>
+  </body>
+</html>

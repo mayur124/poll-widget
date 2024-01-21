@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll Widget Demo - Two Polls</title>
+  </head>
+  <body>
+    <main class="max-w-7xl mx-auto p-4">
+      <a href="/" class="block py-3 font-medium underline text-blue-500">Home</a>
+      <div id="p-1"></div>
+      <div id="p-2" class="border-t border-gray-200 mt-6 pt-6"></div>
+    </main>
+    <script type="module" src="./src/main.tsx"></script>
+    <script>
+      (function (uniqueId) {
+        window.PollWidget = window.PollWidget || {};
+        var PollWidget = window.PollWidget;
+        PollWidget[uniqueId] =
+          PollWidget[uniqueId] ||
+          function (config) {
+            (PollWidget[uniqueId].c = PollWidget[uniqueId].c || []).push(
+              config
+            );
+          };
+      })("_pw21");
+      PollWidget._pw21({
+        parentElementId: "p-1",
+        id: "1",
+        createdTimestamp: Date.now(),
+        question: "Which smartphone brand do you prefer?",
+        options: [
+          {
+            id: "1",
+            label: "Apple",
+            voteCount: 0,
+          },
+          {
+            id: "2",
+            label: "Samsung",
+            voteCount: 0,
+          },
+          {
+            id: "3",
+            label: "Google",
+            voteCount: 0,
+          },
+        ],
+        totalVotes: 0,
+      });
+    </script>
+    <script>
+      (function (uniqueId) {
+        window.PollWidget = window.PollWidget || {};
+        var PollWidget = window.PollWidget;
+        PollWidget[uniqueId] =
+          PollWidget[uniqueId] ||
+          function (config) {
+            (PollWidget[uniqueId].c = PollWidget[uniqueId].c || []).push(
+              config
+            );
+          };
+      })("_pw22");
+      PollWidget._pw22({
+        parentElementId: "p-2",
+        id: "2",
+        createdTimestamp: Date.now(),
+        question: "Which library/framework do you prefer?",
+        options: [
+          {
+            id: "1",
+            label: "React",
+            voteCount: 0,
+          },
+          {
+            id: "2",
+            label: "Vue",
+            voteCount: 0,
+          },
+          {
+            id: "3",
+            label: "Angular",
+            voteCount: 0,
+          },
+          {
+            id: "4",
+            label: "Svelte",
+            voteCount: 0,
+          },
+        ],
+        totalVotes: 0,
+      });
+    </script>
+  </body>
+</html>
