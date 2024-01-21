@@ -70,26 +70,17 @@ You can watch it live [here](https://pollwidget.netlify.app/).
 <br />
 
 ## Screenshots
-- Poll Widget (First look)
+- <p>Poll Widget (First look)</p>
 ![](screenshots/1_first_look.png)
 
-<br />
-
-- Poll Widget (After votes)
+- <p>Poll Widget (After votes)</p>
 ![](screenshots/2_after_votes.png)
 
-<br />
-
-- Error when Same Poll is rendered twice
+- <p>Error when Same Poll is rendered twice</p>
 ![](screenshots/3_same_poll_console_error.png)
 
-<br />
-
-- Multiple Polls in the same page
+- <p>Multiple Polls in the same page</p>
 ![](screenshots/4_multiple_polls_on_same_page.png)
 
-<br />
-
-- Mobile View
-<br />
+- <p>Mobile View</p>
 ![](screenshots/5_responsive.png)
